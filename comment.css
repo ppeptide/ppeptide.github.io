@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kaisei+Decol:wght@500&family=Kiwi+Maru:wght@500&family=M+PLUS+Rounded+1c:wght@500&family=RocknRoll+One&family=Sawarabi+Mincho&family=Shippori+Mincho:wght@500&family=Yuji+Mai&family=Yusei+Magic&display=swap');
+
+body, .chat-room, .chat-line__moderation, .chat-line__status, .chat-line__message, .chat-author__display-name {
+	margin: 0 auto!important;
+	overflow: hidden!important;
+	font-weight: bold!important;
+	font-size: 16px!important;
+	background-color: rgba(0,0,0,0)!important;
+	line-height:1.4;
+}
+
+.chat-line__message{
+  text-align: right;
+  margin: 0 30px 0 auto;
+}
+.chat-line__no-background{
+  display: inline-block!important;
+  width: auto!important;
+  color: #000000 !important;
+  margin-left:8px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.chat-line__no-background::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -18px;
+  top: 8px;
+  margin-right: 8px;
+  border-left: 20px solid #ffffff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.chat-line__username-container span:first-child {
+	display: none !important;
+}
+
+span[aria-hidden="true"] {
+	display: none !important;
+}
+
+.stream-chat-header,
+.channel-leaderboard-container,
+.tw-interactable,
+.tw-z-default,
+.chat-input,
+.chat-line__status{
+  visibility: hidden!important;
+  display:none!important;
+  width: 0!important;
+  height: 0!important;
+  border: none!important;
+}
+
+.user-notice-line{
+  display:none;
+}
+.kAQTjE,
+.hZLfAO {
+    display: none !important;
+}
+
+.community-highlight-stack__scroll-area--disable{
+  display: none!important;
+}
+.community-highlight-stack__backlog-card,
+.community-highlight-stack__nav-target{
+  display: none !important;
+}
+.paid-pinned-chat-message-list{
+  display: none;
+}
+
+.paid-pinned-chat-message-content-wrapper{
+  display: none!important;
+}
