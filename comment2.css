@@ -5,7 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kaisei+Decol:wght@500&family=Kiwi+Maru:wght@500&family=M+PLUS+Rounded+1c:wght@500&family=RocknRoll+One&family=Sawarabi+Mincho&family=Shippori+Mincho:wght@500&family=Yuji+Mai&family=Yusei+Magic&display=swap');
 
-
 body, .chat-room, .chat-line__moderation, .chat-line__status, .chat-line__message, .chat-author__display-name {
 	margin: 0 auto!important;
 	overflow: hidden!important;
