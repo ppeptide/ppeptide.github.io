@@ -25,7 +25,7 @@ body, .chat-room, .chat-line__moderation, .chat-line__status, .chat-line__messag
   margin-left:8px;
   padding: 10px 15px;
   border-radius: 20px;
-  background-color: #ffffff;
+  background-color: #ffff00;
   text-align: left;
 }
 
@@ -38,7 +38,7 @@ body, .chat-room, .chat-line__moderation, .chat-line__status, .chat-line__messag
   right: -18px;
   top: 8px;
   margin-right: 8px;
-  border-left: 20px solid #ffffff;
+  border-left: 20px solid #00ffff;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
 }
