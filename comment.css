@@ -15,7 +15,7 @@ body, .chat-room, .chat-line__moderation, .chat-line__status, .chat-line__messag
 }
 
 .chat-line__message{
-  text-align: right;
+  text-align: left;
   margin: 0 30px 0 auto;
 }
 .chat-line__no-background{
