@@ -3,6 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>import html</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var observer = document.getElementsByClassName('chat-scrollable-area__message-container');
+                var mo = new MutationObserver(function() {
+                    document.getElementById('comment_audio').currentTime = 0;
+                    document.getElementById('comment_audio').play();
+                });
+                var config = {
+                    childList: true,
+                };
+                mo.observe(observer, config);
+            });
+        </script>
     </head>
     <body>
         <h1>import html</h1>
