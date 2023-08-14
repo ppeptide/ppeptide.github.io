@@ -3,26 +3,28 @@
     <head>
         <meta charset="utf-8">
         <title>import html</title>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var observer = document.getElementsByClassName('chat-scrollable-area__message-container')[0];
-                var mo = new MutationObserver(function() {
-                    document.getElementById('comment_audio').currentTime = 0;
-                    document.getElementById('comment_audio').play();
-                });
-                var config = {
-                    childList: true,
-                };
-                mo.observe(observer, config);
-            });
-        </script>
     </head>
     <body>
         <h1>import html</h1>
-        <iframe
-            src="https://www.twitch.tv/embed/RTAinJapan/chat?parent=ppeptide.github.io"
-            height="500"
-            width="350">
+        <iframe　src="https://www.twitch.tv/embed/RTAinJapan/chat?parent=ppeptide.github.io"　height="500"　width="350">
+            <html lang="ja">
+                <head>
+                    <meta charset="utf-8">
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            var observer = document.getElementsByClassName('chat-scrollable-area__message-container')[0];
+                            var mo = new MutationObserver(function() {
+                                document.getElementById('comment_audio').currentTime = 0;
+                                document.getElementById('comment_audio').play();
+                            });
+                            var config = {
+                                childList: true,
+                            };
+                            mo.observe(observer, config);
+                        });
+                    </script>
+                </head>
+            </html>
         </iframe>
         <audio id="comment_audio" preload="auto">
             <source src="pa.mp3" type="audio/mp3">
