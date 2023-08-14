@@ -5,7 +5,7 @@
         <title>import html</title>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                var observer = document.getElementsByClassName('chat-scrollable-area__message-container');
+                var observer = document.getElementsByClassName('chat-scrollable-area__message-container')[0];
                 var mo = new MutationObserver(function() {
                     document.getElementById('comment_audio').currentTime = 0;
                     document.getElementById('comment_audio').play();
