@@ -3,9 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>git</title>
+        <script>
+            function audio() {
+                document.getElementById("btn_audio").currentTime = 0;
+                document.getElementById("btn_audio").play();
+            }
+        </script>
     </head>
     <body>
         <h1>iframe2</h1>
+        <div class="btn" onclick="audio()">alert</div>
+        <audio id="btn_audio" preload="auto">
+            <source src="pa.mp3" type="audio/mp3">
+        </audio>
         <iframe
             src="https://www.twitch.tv/embed/RTAinJapan/chat?parent=ppeptide.github.io"
             height="500"
@@ -17,6 +27,7 @@
                         document.addEventListener('DOMContentLoaded', function() {
                             var observer = document.getElementsByClassName('chat-scrollable-area__message-container')[0];
                             var mo = new MutationObserver(function() {
+                                alert("updated");
                                 document.getElementById('comment_audio').currentTime = 0;
                                 document.getElementById('comment_audio').play();
                             });
