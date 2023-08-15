@@ -9,7 +9,7 @@
                 document.getElementById("btn_audio").play();
             }
             function alt() {
-                var cls = document.getElementsByClassName('iframe_obs');
+                var cls = document.getElementsByClassName('iframe_obs')[0];
                 //var str = cls.toString();
                 console.log(cls);
                 document.getElementById("btn_audio").currentTime = 0;
@@ -33,7 +33,7 @@
                         <meta charset="utf-8">
                         <script>
                             document.addEventListener('DOMContentLoaded', function() {
-                                var observer = document.getElementsByClassName('chat-scrollable-area__message-container')[0];
+                                var observer = document.getElementsByClassName('iframe_obs')[0];
                                 var mo = new MutationObserver(function() {
                                     alert("updated");
                                     document.getElementById('comment_audio').currentTime = 0;
