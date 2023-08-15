@@ -29,19 +29,12 @@
                 document.getElementById("btn_audio").currentTime = 0;
                 document.getElementById("btn_audio").play();
             }
-            
-            window.addEventListener("message", (response) => {
-                console.log(response);
-            }) 
         </script>
     </head>
     <body>
         <div class="iframe_obs">
             <h1>iframe</h1>
             <div class="btn" onclick="log()">console log</div>
-            <audio id="btn_audio" preload="auto">
-                <source src="pa.mp3" type="audio/mp3">
-            </audio>
             <iframe
                 src="https://www.twitch.tv/embed/neth3/chat?parent=ppeptide.github.io"
                 height="500"
@@ -50,14 +43,6 @@
                 <html lang="ja">
                     <head>
                         <meta charset="utf-8">
-                        <script>
-                            window.parent.postMessage({
-                                type: "sample",
-                                data: {
-                                    message: "誰でも受信できるメッセージです",
-                                },
-                            }, "*");
-                        </script>
                     </head>
                 </html>
             </iframe>
