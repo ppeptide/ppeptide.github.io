@@ -20,8 +20,8 @@
             });
             
             function log() {
-                var cls = document.getElementsByClassName('ifr')[0];
-                var cls = cls.getElementsByClassName('chat-scrollable-area__message-container')[0];
+                var cls = document.getElementsByClassName('iframe_obs')[0];
+                var cls = cls.getElementsByTagName('div');
                 console.log(cls);
                 document.getElementById("btn_audio").currentTime = 0;
                 document.getElementById("btn_audio").play();
@@ -38,14 +38,10 @@
             <iframe
                 src="https://www.twitch.tv/embed/neth3/chat?parent=ppeptide.github.io"
                 height="500"
-                width="350"
-                class="ifr">
+                width="350">
                 <html lang="ja">
                     <head>
                         <meta charset="utf-8">
-                        <script>
-
-                        </script>
                     </head>
                 </html>
             </iframe>
