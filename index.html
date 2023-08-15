@@ -6,6 +6,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 var observer = document.getElementsByClassName('iframe_obs')[0];
+                var observer = observer.getElementsByClassName('chat-scrollable-area__message-container')[0];
                 var mo = new MutationObserver(function() {
                     alert("updated");
                     document.getElementById('comment_audio').currentTime = 0;
@@ -20,6 +21,7 @@
             
             function log() {
                 var cls = document.getElementsByClassName('iframe_obs')[0];
+                var cls = cls.getElementsByClassName('chat-scrollable-area__message-container')[0];
                 console.log(cls);
                 document.getElementById("btn_audio").currentTime = 0;
                 document.getElementById("btn_audio").play();
