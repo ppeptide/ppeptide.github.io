@@ -13,6 +13,7 @@
                 });
                 var config = {
                     childList: true,
+                    subtree: true,
                 };
                 mo.observe(observer, config);
             });
@@ -43,13 +44,11 @@
 
                         </script>
                     </head>
-                    <body>
-                        <audio id="comment_audio" preload="auto">
-                            <source src="pa.mp3" type="audio/mp3">
-                        </audio>
-                    </body>
                 </html>
             </iframe>
         </div>
+        <audio id="comment_audio" preload="auto">
+            <source src="pa.mp3" type="audio/mp3">
+        </audio>
     </body>
 </html>
