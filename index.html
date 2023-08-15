@@ -9,7 +9,7 @@
                 document.getElementById("btn_audio").play();
             }
             function alt() {
-                var cls = document.getElementsByClassName('Layout-sc-1xcs6mc-0');
+                var cls = document.getElementsByClassName('iframe_obs');
                 //var str = cls.toString();
                 console.log(cls);
                 document.getElementById("btn_audio").currentTime = 0;
@@ -18,39 +18,41 @@
         </script>
     </head>
     <body>
-        <h1>iframe9</h1>
-        <div class="btn" onclick="alt()">alert</div>
-        <audio id="btn_audio" preload="auto">
-            <source src="pa.mp3" type="audio/mp3">
-        </audio>
-        <iframe
-            src="https://www.twitch.tv/embed/RTAinJapan/chat?parent=ppeptide.github.io"
-            height="500"
-            width="350">
-            <html lang="ja">
-                <head>
-                    <meta charset="utf-8">
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function() {
-                            var observer = document.getElementsByClassName('chat-scrollable-area__message-container')[0];
-                            var mo = new MutationObserver(function() {
-                                alert("updated");
-                                document.getElementById('comment_audio').currentTime = 0;
-                                document.getElementById('comment_audio').play();
+        <div class="iframe_obs">
+            <h1>iframe10</h1>
+            <div class="btn" onclick="alt()">alert</div>
+            <audio id="btn_audio" preload="auto">
+                <source src="pa.mp3" type="audio/mp3">
+            </audio>
+            <iframe
+                src="https://www.twitch.tv/embed/RTAinJapan/chat?parent=ppeptide.github.io"
+                height="500"
+                width="350">
+                <html lang="ja">
+                    <head>
+                        <meta charset="utf-8">
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                var observer = document.getElementsByClassName('chat-scrollable-area__message-container')[0];
+                                var mo = new MutationObserver(function() {
+                                    alert("updated");
+                                    document.getElementById('comment_audio').currentTime = 0;
+                                    document.getElementById('comment_audio').play();
+                                });
+                                var config = {
+                                    childList: true,
+                                };
+                                mo.observe(observer, config);
                             });
-                            var config = {
-                                childList: true,
-                            };
-                            mo.observe(observer, config);
-                        });
-                    </script>
-                </head>
-                <body>
-                    <audio id="comment_audio" preload="auto">
-                        <source src="pa.mp3" type="audio/mp3">
-                    </audio>
-                </body>
-            </html>
-        </iframe>
+                        </script>
+                    </head>
+                    <body>
+                        <audio id="comment_audio" preload="auto">
+                            <source src="pa.mp3" type="audio/mp3">
+                        </audio>
+                    </body>
+                </html>
+            </iframe>
+        </div>
     </body>
 </html>
