@@ -4,6 +4,19 @@
         <meta charset="utf-8">
         <title>git</title>
         <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var observer = document.getElementsByClassName('iframe_obs')[0];
+                var mo = new MutationObserver(function() {
+                    alert("updated");
+                    document.getElementById('comment_audio').currentTime = 0;
+                    document.getElementById('comment_audio').play();
+                });
+                var config = {
+                    childList: true,
+                };
+                mo.observe(observer, config);
+            });
+            
             function log() {
                 var cls = document.getElementsByClassName('iframe_obs')[0];
                 console.log(cls);
@@ -14,8 +27,8 @@
     </head>
     <body>
         <div class="iframe_obs">
-            <h1>iframe10</h1>
-            <div class="btn" onclick="log()">alert</div>
+            <h1>iframe</h1>
+            <div class="btn" onclick="log()">console log</div>
             <audio id="btn_audio" preload="auto">
                 <source src="pa.mp3" type="audio/mp3">
             </audio>
@@ -27,18 +40,7 @@
                     <head>
                         <meta charset="utf-8">
                         <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                                var observer = document.getElementsByClassName('iframe_obs')[0];
-                                var mo = new MutationObserver(function() {
-                                    alert("updated");
-                                    document.getElementById('comment_audio').currentTime = 0;
-                                    document.getElementById('comment_audio').play();
-                                });
-                                var config = {
-                                    childList: true,
-                                };
-                                mo.observe(observer, config);
-                            });
+
                         </script>
                     </head>
                     <body>
