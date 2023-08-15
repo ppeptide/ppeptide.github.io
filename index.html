@@ -8,17 +8,18 @@
                 document.getElementById("btn_audio").currentTime = 0;
                 document.getElementById("btn_audio").play();
             }
-            function alert() {
-                var cls = document.getElementsByClassName('chat-scrollable-area__message-container')[0];
-                alert(var);
+            function alt() {
+                var cls = document.getElementsByClassName('chat-scrollable-area__message-container');
+                var str = cls.toString();
+                alert(str);
                 document.getElementById("btn_audio").currentTime = 0;
                 document.getElementById("btn_audio").play();
             }
         </script>
     </head>
     <body>
-        <h1>iframe3</h1>
-        <div class="btn" onclick="alert()">alert</div>
+        <h1>iframe4</h1>
+        <div class="btn" onclick="alt()">alert</div>
         <audio id="btn_audio" preload="auto">
             <source src="pa.mp3" type="audio/mp3">
         </audio>
