@@ -21,7 +21,18 @@
                 mo.observe(observer, config);
             });
             
-
+            function log() {
+                //var cls = document.getElementById('.chat-scrollable-area__message-container');
+                var elem = document.getElementById('elem');
+                var cls = elem.contentWindow.document.querySelector('.chat-scrollable-area__message-container');
+                console.log(cls);
+                document.getElementById("btn_audio").currentTime = 0;
+                document.getElementById("btn_audio").play();
+            }
+            
+            window.addEventListener("message", (response) => {
+                console.log(respons);
+            }) 
         </script>
     </head>
     <body>
@@ -40,14 +51,12 @@
                     <head>
                         <meta charset="utf-8">
                         <script>
-                            function log() {
-                                //var cls = document.getElementById('.chat-scrollable-area__message-container');
-                                var elem = document.getElementById('elem');
-                                var cls = elem.contentWindow.document.querySelector('.chat-scrollable-area__message-container');
-                                console.log(cls);
-                                document.getElementById("btn_audio").currentTime = 0;
-                                document.getElementById("btn_audio").play();
-                            }
+                            window.parent.postMessage({
+                                type: "sample",
+                                data: {
+                                    message: "誰でも受信できるメッセージです",
+                                },
+                            }, "*");
                         </script>
                     </head>
                 </html>
