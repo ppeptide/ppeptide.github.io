@@ -21,14 +21,7 @@
                 mo.observe(observer, config);
             });
             
-            function log() {
-                //var cls = document.getElementById('.chat-scrollable-area__message-container');
-                var elem = document.getElementById('elem');
-                var cls = elem.contentWindow.document.querySelector('.chat-scrollable-area__message-container');
-                console.log(cls);
-                document.getElementById("btn_audio").currentTime = 0;
-                document.getElementById("btn_audio").play();
-            }
+
         </script>
     </head>
     <body>
@@ -46,6 +39,16 @@
                 <html lang="ja">
                     <head>
                         <meta charset="utf-8">
+                        <script>
+                            function log() {
+                                //var cls = document.getElementById('.chat-scrollable-area__message-container');
+                                var elem = document.getElementById('elem');
+                                var cls = elem.contentWindow.document.querySelector('.chat-scrollable-area__message-container');
+                                console.log(cls);
+                                document.getElementById("btn_audio").currentTime = 0;
+                                document.getElementById("btn_audio").play();
+                            }
+                        </script>
                     </head>
                 </html>
             </iframe>
