@@ -22,12 +22,12 @@
             });
             
             function log() {
+                document.getElementById("comment_audio").currentTime = 0;
+                document.getElementById("comment_audio").play();
                 //var cls = document.getElementById('.chat-scrollable-area__message-container');
                 var elem = document.getElementById('elem');
                 var cls = elem.contentWindow.document.querySelector('.chat-scrollable-area__message-container');
                 console.log(cls);
-                document.getElementById("btn_audio").currentTime = 0;
-                document.getElementById("btn_audio").play();
             }
         </script>
     </head>
@@ -40,20 +40,6 @@
                 height="500"
                 width="350"
                 id="elem">
-                <html lang="ja">
-                    <head>
-                        <meta charset="utf-8">
-                        <script>
-                            function audio() {
-                                document.getElementById("btn_audio").currentTime = 0;
-                                document.getElementById("btn_audio").play();
-                            }
-                        </script>
-                    </head>
-                    <body>
-                        <div class="in_frame" onclick="audio()">audio</div>
-                    </body>
-                </html>
             </iframe>
         </div>
         <audio id="comment_audio" preload="auto">
