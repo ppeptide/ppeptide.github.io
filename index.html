@@ -43,7 +43,16 @@
                 <html lang="ja">
                     <head>
                         <meta charset="utf-8">
+                        <script>
+                            function audio() {
+                                document.getElementById("btn_audio").currentTime = 0;
+                                document.getElementById("btn_audio").play();
+                            }
+                        </script>
                     </head>
+                    <body>
+                        <div class="in_frame" onclick="audio()">audio</div>
+                    </body>
                 </html>
             </iframe>
         </div>
