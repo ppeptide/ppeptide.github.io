@@ -24,7 +24,7 @@
                 document.getElementById("comment_audio").currentTime = 0;
                 document.getElementById("comment_audio").play();
                 var elem = document.getElementById('elem');
-                var cls = elem.querySelector('.chat-scrollable-area__message-container');
+                var cls = elem.contentDocument.querySelector('.chat-scrollable-area__message-container');
                 //var cls = elem.contentWindow.document.querySelector('.chat-scrollable-area__message-container');
                 console.log(cls);
             }
